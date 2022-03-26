@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地址</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <form action = "地址2.php" method = "post">
+        <p>請輸入你每天預留的學習時數</p>
+        
+        <label >課程一: </label>
+        <select id="list1" name="list1" onchange="update1()">
+            <option>請選擇</option>
+        </select>
+        <label >開課單位: </label>
+        <select id="list2" name="list2" onchange="update2()">
+            <option>請選擇</option>
+        </select>
+        <label >分部: </label>
+        <select id="list3" name="list3">
+            <option>請選擇</option>
+        </select><br><br>
+        
+        <input type = "submit" value = "Submit" >
+</form> 
+    
+</body>
+<script language="JavaScript" type='text/javascript'>
+    var jclass= <?php echo json_encode($ClassCodeArr); ?>;
+    var jhost= <?php echo json_encode($HostCodeArr); ?>;
+    var jaddress= <?php echo json_encode($AddressCodeArr); ?>;
+    </script>
+    <script language="JavaScript" type="text/javascript" src="test.js"></script>
+
+</html>
